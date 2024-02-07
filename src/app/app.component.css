@@ -1,0 +1,12 @@
+nav{
+    background-color: #32aeb1;
+    height: 100px;
+}
+
+nav img{
+    z-index: 2;
+}
+
+.search-bar{
+    left: 550px;
+}
