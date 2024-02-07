@@ -4,7 +4,14 @@ import { BreathComponent } from './breath/breath.component';
 import { SurgicalComponent } from './surgical/surgical.component';
 import { MeasurementComponent } from './measurement/measurement.component';
 import { OrthoComponent } from './ortho/ortho.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const route:Routes=[
+  {path:'', component:BreathComponent},
+  {path:'measurement', component:MeasurementComponent},
+  {path:'ortho', component:OrthoComponent},
+  {path:'surgical', component:SurgicalComponent}
+]
 
 
 @NgModule({
@@ -15,7 +22,8 @@ import { OrthoComponent } from './ortho/ortho.component';
     OrthoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    [RouterModule.forChild(route)]
   ]
 })
 export class DevicesModule { }
