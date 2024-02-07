@@ -5,7 +5,15 @@ import { FaceMakeupComponent } from './face-makeup/face-makeup.component';
 import { LipsComponent } from './lips/lips.component';
 import { MakeuptoolsComponent } from './makeuptools/makeuptools.component';
 import { NailsComponent } from './nails/nails.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const route:Routes=[
+  {path:'', component:EyesComponent},
+  {path:'facemakeup', component:FaceMakeupComponent},
+  {path:'lips', component:LipsComponent},
+  {path:'makeuptools', component:MakeuptoolsComponent},
+  {path:'nails', component:NailsComponent}
+]
 
 
 @NgModule({
@@ -17,7 +25,8 @@ import { NailsComponent } from './nails/nails.component';
     NailsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    [RouterModule.forChild(route)]
   ]
 })
 export class MakeupModule { }
