@@ -10,8 +10,20 @@ import { BodyCareComponent } from './body-care/body-care.component';
 import { ToolsandaccessoriesComponent } from './toolsandaccessories/toolsandaccessories.component';
 import { LipCareComponent } from './lip-care/lip-care.component';
 import { BathingAceessoriesComponent } from './bathing-aceessories/bathing-aceessories.component';
+import { RouterModule, Routes } from '@angular/router';
 
-
+const route:Routes=[
+  {path:'', component:HomeandHealthComponent},
+  {path:'seniorcare', component:SeniorCareComponent},
+  {path:'facepersonal', component:FacePersonalCareComponent},
+  {path:'handsandfeet', component:HandsandFeetComponent},
+  {path:'oralcare', component:OralCareComponent},
+  {path:'bathshower', component:BathandShowerComponent},
+  {path:'bodycare', component:BodyCareComponent},
+  {path:'toolsandacc', component:ToolsandaccessoriesComponent},
+  {path:'lipcare', component:LipCareComponent},
+  {path:'bathingacc', component:BathingAceessoriesComponent}
+]
 
 @NgModule({
   declarations: [
@@ -27,7 +39,8 @@ import { BathingAceessoriesComponent } from './bathing-aceessories/bathing-acees
     BathingAceessoriesComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    [RouterModule.forChild(route)]
   ]
 })
 export class PersonalCareModule { }
