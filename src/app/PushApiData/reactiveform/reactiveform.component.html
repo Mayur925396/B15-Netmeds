@@ -1,0 +1,53 @@
+<p>reactiveform works!</p>
+
+<div class="container">
+    <form [formGroup]="formdata" (ngSubmit)="getdata()">
+        <input type="hidden" name="" id="" formControlName="id">
+    <div class="form-group">
+        <label for="" class="form-label">discount</label>
+        <input type="text" class="form-control" formControlName="discount">
+    </div>
+
+    <div class="form-group">
+        <label for="" class="form-label">imagepath</label>
+        <input type="text" class="form-control" formControlName="imagepath">
+    </div>
+
+    <div class="form-group">
+        <label for="" class="form-label">rating</label>
+        <input type="text" class="form-control" formControlName="rating">
+    </div>
+
+    <div class="form-group">
+        <label for="" class="form-label">productname</label>
+        <input type="text" class="form-control" formControlName="productname">
+    </div>
+
+    <div class="form-group">
+        <label for="" class="form-label">manifactorer</label>
+        <input type="text" class="form-control" formControlName="manifactorer">
+    </div>
+
+    <div class="form-group">
+        <label for="" class="form-label">price</label>
+        <input type="text" class="form-control" formControlName="price">
+    </div>
+
+    <div class="form-group">
+        <label for="" class="form-label">MRP</label>
+        <input type="text" class="form-control" formControlName="MRP">
+    </div>
+
+    <div class="form-group">
+        <label for="" class="form-label">category</label>
+        <input type="text" class="form-control" formControlName="category">
+    </div>
+
+    <div class="form-group">
+        <label for="" class="form-label">brands</label>
+        <input type="text" class="form-control" formControlName="brands">
+    </div> <br>
+
+    <button type="submit" class="btn btn-outline-success">Submit</button>
+    </form>
+</div>
