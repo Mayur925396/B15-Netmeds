@@ -1,84 +1,35 @@
 {
-
-    "ayush":[
-        
-    ],
-
-
-    
-    "covid":[
-        
-    ],
-
-
-    "devices":[
-        
-    ],
-
-
-
-    "diabeties":[
-        
-    ],
-
-
-    "eyewear":[
-        
-    ],
-
-    "fitness":[
-        
-    ],
-
-    "healthconditions":[
-        
-    ],
-
-    "momandbaby":[
-        
-    ],
-
-    "personalcare":[
-        
-    ],
-    "sexsualwellness":[
-        
-    ],
-    "surgical":[
-        
-    ],
-
-    "veterinary":[
-        
-    ],
-    "stores":[
-        
-    ],
-    "trending":[
-        
-    ],
-
-
-
-
-
-    "fragrances":[
-        
-    ],
-    "mensgrooming":[
-        
-    ],
-    "hair":[
-        
-    ],
-    "makeup":[
-        
-    ],
-    "skincare":[
-        
-    ],
-    "toolsandapplience":[
-        
-    ]
-
+  "ayush": [
+    {
+      "id": 1,
+      "discount": "w",
+      "imagepath": "w",
+      "rating": "w",
+      "productname": "w",
+      "manifactorer": "w",
+      "price": "w",
+      "MRP": "what ",
+      "category": "w",
+      "brands": "w"
+    }
+  ],
+  "covid": [],
+  "devices": [],
+  "diabeties": [],
+  "eyewear": [],
+  "fitness": [],
+  "healthconditions": [],
+  "momandbaby": [],
+  "personalcare": [],
+  "sexsualwellness": [],
+  "surgical": [],
+  "veterinary": [],
+  "stores": [],
+  "trending": [],
+  "fragrances": [],
+  "mensgrooming": [],
+  "hair": [],
+  "makeup": [],
+  "skincare": [],
+  "toolsandapplience": []
 }
