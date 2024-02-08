@@ -9,9 +9,7 @@ import { Custom1Pipe } from './Common/custom1.pipe';
 import { Custom2Pipe } from './Common/custom2.pipe';
 import { CustDirective } from './Common/cust.directive';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveformComponent } from './PushApiData/reactiveform/reactiveform.component';
 import { HttpClientModule } from '@angular/common/http'
@@ -31,9 +29,7 @@ import { HttpClientModule } from '@angular/common/http'
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-
-    BrowserAnimationsModule
-=======
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
