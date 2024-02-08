@@ -27,8 +27,44 @@ import { RateUsComponent } from './Account/rate-us/rate-us.component';
 import { PaymentMethodsComponent } from './Account/payment-methods/payment-methods.component';
 import { MedicineOrdersComponent } from './Account/medicine-orders/medicine-orders.component';
 import { MyRewardsComponent } from './Account/my-rewards/my-rewards.component';
+import { FooterbarComponent } from './Footer/footerbar/footerbar.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ContactUsComponent } from './Footer/contact-us/contact-us.component';
 
-
+const route:Routes=[
+  {path:'', component:HomebodyComponent },
+  {path:'navbar',component:NavbarComponent},
+  {path:'prescription',component:PrescriptionComponent},
+  {path:'offer', component:OffersComponent},
+  {path:'cart', component:CartComponent},
+  {path:'accountinfo', component:AccountInformationComponent},
+  {path:'mywallet',component:MyWalletComponent},
+  {path:'mywishlist', component:MywishlistComponent},
+  {path:'accountForm', component:LoginFormComponent},
+  {path:'netmedsfirst', component:NetmedsMembershipComponent},
+  {path:'delivery', component:DeliveryAddressComponent},
+  {path:'mypriscription', component:MyprisciptionComponent},
+  {path:'mysubscription', component:MySubscriptionComponent},
+  {path:'referandearns', component:ReferandEarnsComponent},
+  {path:'rateus', component:RateUsComponent},
+  {path:'paymentmethods', component:PaymentMethodsComponent},
+  {path:'medicineorder', component:MedicineOrdersComponent},
+  {path:'myrewards', component:MyRewardsComponent},
+  {path:'footerbar', component:FooterbarComponent},
+  {path:'aboutnetmeds', component:AboutNetmedsComponent},
+  {path:'customerspeak', component:CustomerSpeakComponent},
+  {path:'inthenews', component:IntheNewsComponent},
+  {path:'contactus', component:ContactUsComponent},
+  {path:'termsandconditions', component:TermsandConditionComponent},
+  {path:'privacypolicy', component:PrivacyPolicyComponent},
+  {path:'fees', component:FeesandPayementPolicyComponent},
+  {path:'shoppingdelivery', component:ShippingandDeliveryPolicyComponent},
+  {path:'refund', component:RefundPolicyComponent},
+  {path:'healtharticles', component:HealthArticlesComponent},
+  {path:'faqs', component:FAQSComponent}
+  
+]
 
 @NgModule({
   declarations: [
@@ -58,10 +94,14 @@ import { MyRewardsComponent } from './Account/my-rewards/my-rewards.component';
     RateUsComponent,
     PaymentMethodsComponent,
     MedicineOrdersComponent,
-    MyRewardsComponent
+    MyRewardsComponent,
+    FooterbarComponent,
+    NavbarComponent,
+    ContactUsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    [RouterModule.forChild(route)]
   ]
 })
 export class HomeModule { }
