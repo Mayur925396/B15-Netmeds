@@ -5,8 +5,15 @@ import { PersoanlandhomeComponent } from './persoanlandhome/persoanlandhome.comp
 import { BuisnessComponent } from './buisness/buisness.component';
 import { MaskandglovesComponent } from './maskandgloves/maskandgloves.component';
 import { TravelComponent } from './travel/travel.component';
+import { RouterModule, Routes } from '@angular/router';
 
-
+const route:Routes=[
+  {path:'', component:OxygencanComponent},
+  {path:'personalhome', component:PersoanlandhomeComponent},
+  {path:'business', component:BuisnessComponent},
+  {path:'mask', component:MaskandglovesComponent},
+  {path:'travel', component:TravelComponent}
+]
 
 @NgModule({
   declarations: [
@@ -17,7 +24,8 @@ import { TravelComponent } from './travel/travel.component';
     TravelComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    [RouterModule.forChild(route)]
   ]
 })
 export class CovidessentialModule { }

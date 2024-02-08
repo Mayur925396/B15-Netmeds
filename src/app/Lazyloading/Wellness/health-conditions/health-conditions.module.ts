@@ -13,8 +13,23 @@ import { CardiacCareComponent } from './cardiac-care/cardiac-care.component';
 import { ColdandFeverComponent } from './coldand-fever/coldand-fever.component';
 import { ImmunityComponent } from './immunity/immunity.component';
 import { LoungeCareComponent } from './lounge-care/lounge-care.component';
+import { RouterModule, Routes } from '@angular/router';
 
-
+const route:Routes=[
+  {path:'', component:WomensCareComponent},
+  {path:'bonejoint', component:BoneJointpainComponent},
+  {path:'liver', component:LivercareComponent},
+  {path:'piles', component:PilescareComponent},
+  {path:'weightcare', component:WeightcareComponent},
+  {path:'stomach', component:StomachCareComponent},
+  {path:'mental', component:MentalCareComponent},
+  {path:'daddiction', component:DAddictionComponent},
+  {path:'diabeticcare', component:DiabeticCareComponent },
+  {path:'cardiaccare', component:CardiacCareComponent},
+  {path:'coldfever', component:ColdandFeverComponent},
+  {path:'immunity', component:ImmunityComponent},
+  {path:'lounge', component:LoungeCareComponent}
+]
 
 @NgModule({
   declarations: [
@@ -33,7 +48,8 @@ import { LoungeCareComponent } from './lounge-care/lounge-care.component';
     LoungeCareComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    [RouterModule.forChild(route)]
   ]
 })
 export class HealthConditionsModule { }
