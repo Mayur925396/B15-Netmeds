@@ -4,8 +4,14 @@ import { HealthLibraryComponent } from './health-library/health-library.componen
 import { PetientsAlikeComponent } from './petients-alike/petients-alike.component';
 import { AllaboutCancerComponent } from './allabout-cancer/allabout-cancer.component';
 import { CoronaAwarenessComponent } from './corona-awareness/corona-awareness.component';
+import { RouterModule, Routes } from '@angular/router';
 
-
+const route:Routes=[
+  {path:'', component:HealthLibraryComponent},
+  {path:'petientsalike', component:PetientsAlikeComponent},
+  {path:'allaboutcancer', component:AllaboutCancerComponent},
+  {path:'coronaaware', component:CoronaAwarenessComponent},
+]
 
 @NgModule({
   declarations: [
@@ -15,7 +21,8 @@ import { CoronaAwarenessComponent } from './corona-awareness/corona-awareness.co
     CoronaAwarenessComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    [RouterModule.forChild(route)]
   ]
 })
 export class HealthCornerModule { }

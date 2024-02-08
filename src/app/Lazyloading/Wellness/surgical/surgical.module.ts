@@ -8,7 +8,19 @@ import { DressingComponent } from './dressing/dressing.component';
 import { GiCareComponent } from './gi-care/gi-care.component';
 import { UrinaryCareComponent } from './urinary-care/urinary-care.component';
 import { WoundTreatmentComponent } from './wound-treatment/wound-treatment.component';
+import { RouterModule, Routes } from '@angular/router';
 
+
+const route:Routes=[
+  {path:'', component:RespiratorySuppliesComponent},
+  {path:'surgical', component:SurgicalConsumablesComponent},
+  {path:'ivinfusion', component:IVinfusionComponent},
+  {path:'surgicalinstrument', component:SurgicalInstrumentsComponent},
+  {path:'dressing', component:DressingComponent},
+  {path:'gicare', component:GiCareComponent},
+  {path:'urinary', component:UrinaryCareComponent},
+  {path:'wound', component:WoundTreatmentComponent}
+]
 
 
 @NgModule({
@@ -23,7 +35,8 @@ import { WoundTreatmentComponent } from './wound-treatment/wound-treatment.compo
     WoundTreatmentComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    [RouterModule.forChild(route)]
   ]
 })
 export class SurgicalModule { }
