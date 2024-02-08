@@ -3,8 +3,13 @@ import { CommonModule } from '@angular/common';
 import { VitaminStoreComponent } from './vitamin-store/vitamin-store.component';
 import { DremaCosmeticComponent } from './drema-cosmetic/drema-cosmetic.component';
 import { DiabetiesCenterComponent } from './diabeties-center/diabeties-center.component';
+import { RouterModule, Routes } from '@angular/router';
 
-
+const route:Routes=[
+  {path:'', component:VitaminStoreComponent},
+  {path:'drema', component:DremaCosmeticComponent},
+  {path:'diabetiescenter', component:DiabetiesCenterComponent}
+]
 
 @NgModule({
   declarations: [
@@ -13,7 +18,8 @@ import { DiabetiesCenterComponent } from './diabeties-center/diabeties-center.co
     DiabetiesCenterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    [RouterModule.forChild(route)]
   ]
 })
 export class StoresModule { }
