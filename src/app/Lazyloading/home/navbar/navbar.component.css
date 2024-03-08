@@ -1,0 +1,187 @@
+.nxt {
+    border: 1px solid aqua;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+.column2,
+.column3,
+.column4,
+.column5 {
+    border-left: 1px solid rgb(223, 223, 223);
+    padding-left: 10px;
+    
+}
+
+.navbar {
+    background-color: #24aeb1;
+    height: 136px;
+
+}
+.navlink{
+    cursor: pointer;
+}
+
+.navbar-brand{
+height:90px;
+margin-top: -10px;
+}
+.cardheader {
+    border-bottom: 1px dashed aquamarine;
+}
+
+.quotes {
+    color: Black;
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+.dropdown:hover>#drop1,
+.dropdown:hover>#drop2,
+.dropdown:hover>#drop3,
+.dropdown:hover>#drop4 {
+    display: flex;
+    color: black;
+    font-size: small;
+    visibility: initial !important;
+    margin-left:-180px;
+    box-shadow: 2px 2px 10px grey;
+
+}
+
+
+
+.dropdown-item:hover {
+    background-color: transparent;
+    color: #24aeb1;
+}
+
+.foots {
+    width: 400px;
+}
+.column :first-child{
+    color:#24aeb1;
+    width:180px;
+    font-size: 16px;
+}
+.column2 :first-child{
+    color:#24aeb1;
+    width:180px;
+    font-size: 16px;
+}
+.column3 :first-child{
+    color:#24aeb1;
+    width:180px;
+    font-size: 16px;
+}
+.column4 :first-child{
+    color:#24aeb1;
+    width:180px;
+    font-size: 16px;
+}
+.column5 :first-child{
+    color:#24aeb1;
+    width:180px;
+    font-size: 16px;
+}
+/* .dropdown-menu>#drop1,
+.dropdown-menu>#drop2,
+.dropdown-menu>#drop3,
+.dropdown-menu>#drop4 {
+ display:none;
+} */
+
+.dropdown .dropdown-menu{
+    display:none
+}
+
+
+.treat {
+    color: white;
+}
+
+.fluid {
+    margin-left: 150px;
+}
+
+.dropdownposition .dropdown-menu {
+    position: absolute;
+    left:210px;
+    
+
+}
+.dropdown2{
+margin-top:-8px
+}
+
+.pinlocate,
+.pinlocate .pin {
+    line-height: 20px;
+    font-weight: 400;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+
+.searchbar {
+    width: 607px;
+
+}
+
+.searchbar .pops {
+    border: none !important;
+    height: 48px !important
+}
+
+.searchbar input:focus,
+.searchbar input {
+    border: none !important;
+    height: 48px !important;
+    width: 400px;
+    outline: none;
+}
+
+.temp2 {
+    color: grey;
+}
+
+.searchbar,
+.searchbar input,
+.searchbar .pops {
+    height: 50px;
+    background-color: white;
+    line-height:40px;
+    border-radius: 5px;
+
+}
+
+
+
+
+.nav3 {
+    background-color: #f3f3f3;
+    height: 42px;
+    line-height: 42px;
+
+}
+
+.nav {
+    height:46px;
+    background-color: #24aeb1;
+    padding-top:0px;
+  
+
+}
+
+
+.stcikednav{
+    padding-top:20px;
+    height: 90px;
+    position:sticky;
+    top:0px;
+    z-index:1
+}

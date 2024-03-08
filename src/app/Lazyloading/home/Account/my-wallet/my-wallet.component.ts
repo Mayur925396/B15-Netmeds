@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-wallet.component.css']
 })
 export class MyWalletComponent {
+  public date:any=new Date(2024,1,10);
+  public date2:any=new Date(2024,0,10);
 
 }

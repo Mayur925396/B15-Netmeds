@@ -28,17 +28,40 @@ import { PaymentMethodsComponent } from './Account/payment-methods/payment-metho
 import { MedicineOrdersComponent } from './Account/medicine-orders/medicine-orders.component';
 import { MyRewardsComponent } from './Account/my-rewards/my-rewards.component';
 import { FooterbarComponent } from './Footer/footerbar/footerbar.component';
-import { NavbarComponent } from './navbar/navbar.component';
+// import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactUsComponent } from './Footer/contact-us/contact-us.component';
+import { ToastModule } from 'primeng/toast';
+import { AccountinformationComponent } from './Account/accountinformation/accountinformation.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MessageService } from 'primeng/api';
+import { CustDirective } from 'src/app/Common/cust.directive';
+import { AuthGuard } from './Common/auth.guard';
+import { ConfirmboxComponent } from 'src/app/Common/Model/confirmbox/confirmbox.component';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { RippleModule } from 'primeng/ripple';
+import { DataViewLayoutOptions, DataViewModule } from 'primeng/dataview';
+import { TagModule } from 'primeng/tag';
+import { RatingModule } from 'primeng/rating';
+import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
+import { ChipModule } from 'primeng/chip';
+import { FocusTrapModule } from 'primeng/focustrap';
+import { PickListModule } from 'primeng/picklist';
+import { SavelaterComponent } from './savelater/savelater.component';
+
+
+
+
+
 
 const route:Routes=[
   {path:'', component:HomebodyComponent },
-  {path:'navbar',component:NavbarComponent},
+  // {path:'navbar',component:NavbarComponent},
   {path:'prescription',component:PrescriptionComponent},
   {path:'offer', component:OffersComponent},
   {path:'cart', component:CartComponent},
-  {path:'accountinfo', component:AccountInformationComponent},
+  {path:'accountinfo', component:AccountInformationComponent, canActivate:[AuthGuard]},
   {path:'mywallet',component:MyWalletComponent},
   {path:'mywishlist', component:MywishlistComponent},
   {path:'accountForm', component:LoginFormComponent},
@@ -62,7 +85,11 @@ const route:Routes=[
   {path:'shoppingdelivery', component:ShippingandDeliveryPolicyComponent},
   {path:'refund', component:RefundPolicyComponent},
   {path:'healtharticles', component:HealthArticlesComponent},
-  {path:'faqs', component:FAQSComponent}
+  {path:'faqs', component:FAQSComponent},
+  
+  
+  
+ 
   
 ]
 
@@ -96,12 +123,41 @@ const route:Routes=[
     MedicineOrdersComponent,
     MyRewardsComponent,
     FooterbarComponent,
-    NavbarComponent,
-    ContactUsComponent
+    // NavbarComponent,
+    ContactUsComponent,
+    AccountinformationComponent,
+    CustDirective,
+    SavelaterComponent
+    
   ],
   imports: [
     CommonModule,
-    [RouterModule.forChild(route)]
-  ]
+    [RouterModule.forChild(route)],
+    FormsModule,
+    ToastModule,
+    ReactiveFormsModule,
+    ConfirmboxComponent,
+    ConfirmDialogModule,
+    RippleModule,
+    DataViewModule,
+    TagModule,
+    RatingModule,
+    ButtonModule,
+    TableModule,
+    ChipModule,
+    FocusTrapModule,
+    PickListModule
+
+
+    
+    
+    
+    
+
+
+    
+   
+  ],
+  
 })
 export class HomeModule { }

@@ -7,9 +7,21 @@ import { WellnessHomeComponent } from './Lazyloading/Wellness/wellness-home/well
 import { BeautyComponent } from './Lazyloading/Beauty/beauty/beauty.component';
 import { Custom1Pipe } from './Common/custom1.pipe';
 import { Custom2Pipe } from './Common/custom2.pipe';
-import { CustDirective } from './Common/cust.directive';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MessageService } from 'primeng/api';
+import { NavbarComponent } from './Lazyloading/home/navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
+import { ToastModule } from 'primeng/toast';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
+import { OverlaypanelComponent } from './Common/Model/overlaypanel/overlaypanel.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -18,15 +30,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BeautyComponent,
     Custom1Pipe,
     Custom2Pipe,
-    CustDirective
+    NavbarComponent,
+    OverlaypanelComponent,
+
+
+
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    ToastModule,
+    ConfirmDialogModule,
+    ButtonModule,
+    RippleModule,
   ],
-  providers: [],
+
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

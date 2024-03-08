@@ -1,0 +1,119 @@
+<div class="cardprofile">
+    <div class="subprofile d-flex col-12">
+        <div class="loginprofile ms-3 col-5">
+            <div class="login">
+                <P>{{"Login Information"| uppercase}} </P>
+            </div>
+            <div class="details">
+                <P>Email</P>
+                <div>{{CustomerInfo.email}}</div>
+            </div>
+            <div class="details">
+                <P>Mobile Number</P>
+                <div>{{CustomerInfo.phone}}</div>
+            </div>
+        </div>
+        <div class="personalprofile ms-5 col-5">
+            <div class="login">
+                <P>{{"Personal Information"| uppercase}} </P>
+            </div>
+            <div class="details">
+                <P>Full name</P>
+                <div>{{CustomerInfo.fname}} {{CustomerInfo.lname}}</div>
+            </div>
+            <div class="details">
+                <P>Gender</P>
+                <div>{{CustomerInfo.gender}}</div>
+            </div>
+            <div class="details">
+                <P>Age</P>
+                <div>{{CustomerAge}}</div>
+            </div>
+            <div class="editButton mt-3">
+                <button appCust class="col-12" data-bs-toggle="modal" data-bs-target="#editForm" (click)="updateForm()">
+                    <i class="bi bi-pencil-fill me-3" ></i>Edit Profile
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="editForm">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header"> <button class="btn-close" data-bs-dismiss="modal" (click)="onReset()"></button></div>
+<div class="modal-body col-12">
+<div class="p-2 formcommon" style="background-color: white; border-radius: 10px;">
+    <form [formGroup]="customerInfo" (ngSubmit)="onSubmit()">
+        <div class="form-group mt-3">
+            <label for="p-float-label" class="col-12">FIRST NAME<br></label>
+            <input type="text" class="col-12" id= "float-input"  formControlName="fname" required
+                [ngClass]="{'is-invalid': isFrmSub && valid.fname.errors}">
+            <div class="invalid-feedback" *ngIf="isFrmSub && valid.fname.touched">
+                <i>Please Enter Your First Name!</i>
+            </div>
+        </div>
+        <div class="form-group mt-3">
+            <label for="lname" class="col-12">LAST NAME<br></label>
+            <input type="text"id="lname" class="col-12 form-control" formControlName="lname" required
+                [ngClass]="{'is-invalid': isFrmSub && valid.lname.errors}">
+            <div class="invalid-feedback" *ngIf="isFrmSub && valid.lname.touched">
+                <i>Please Enter Your Last Name!</i>
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-between mt-3">
+            <div class="colmid">
+                <label for="gender" class="col-12">Gender
+                <div>
+                 <select formControlName="gender" id="gender" class="form-select selectdropdown"
+                 required [ngClass]="{'is-invalid': isFrmSub && valid.gender.errors}" placeholder="--Select Gender--">
+                    <option selected>--Select Gender--</option>
+                    <option *ngFor="let x of Gender">{{x}}</option>
+                 </select>
+                 <div class="invalid-feedback" *ngIf="isFrmSub && valid.gender.touched">
+                    <div *ngIf="isFrmSub && valid.gender.errors?.required"> <i>Please Select Your Gender!</i></div>
+                </div>
+                </div> 
+            </label>
+                
+            </div>
+
+            <div class="colmid">
+                <label for="age" class="col-12">Age
+                <input type="date" id="age" class="form-control" formControlName="age" required
+                    [ngClass]="{'is-invalid': isFrmSub && valid.age.errors}"></label>
+                <div class="invalid-feedback" *ngIf="isFrmSub && valid.age.touched">
+                    <div *ngIf="isFrmSub && valid.age.errors?.required"> <i>Please Enter Your BirtDate!</i></div>
+                </div>
+            </div>
+        
+        </div>
+        <div class="form-group mt-3">
+            <label for="email" class="col-12">EMAIL
+            <input type="email" id="email" class="form-control" formControlName="email" required
+                [ngClass]="{'is-invalid': isFrmSub && valid.email.errors}"></label>
+            <div class="invalid-feedback" *ngIf="isFrmSub && valid.email.touched">
+                <div *ngIf="isFrmSub && valid.email.errors?.required"> <i>Please Enter Your Email Id!</i></div>
+                <div *ngIf="isFrmSub && valid.email.errors?.pattern"><i>Please Enter Valid Email Id!</i></div>
+            </div>
+
+        </div>
+        <div class="form-group mt-3">
+            <label for="phone" class="col-12">MOBILE NUMBER
+            <input type="tel" id="phone" class="form-control" formControlName="phone" readonly></label>
+        </div>
+
+
+
+        <div class="form-group mt-5">
+            <button appCust type="submit" class="col-12" (click)="DataStore()" >Save Changes</button>
+        </div>
+
+
+
+
+    </form>
+</div>
+</div>
+</div>
+</div>
+</div>

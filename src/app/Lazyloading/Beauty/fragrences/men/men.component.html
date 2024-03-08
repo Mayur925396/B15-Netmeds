@@ -1,1 +1,102 @@
-<p>men works!</p>
+<p-toast></p-toast>
+<p-confirmDialog></p-confirmDialog>
+
+
+
+<div class="productimg ">
+  <div class="CardShow">
+  
+    <div class="card cardform" style="width: 260px; height:409px" *ngFor="let x of Data, let i=index">
+      <div class="imgcard">
+        <div class="text-center text-bold bold mb-1"
+          [ngStyle]="{'color':'white','z-index':'1','background-color':'#84BE52', 'width':'50px','height':'17px','border-radius':'2px'}">
+          {{x.discount}}% OFF</div>
+        <!-- <div class="imgflex d-flex justify-content-center"> -->
+          <p-image class="text-center ms-5"  [src]="x.image" width='120px' height="120px" alt="Image"  [preview]="true" >
+            <ng-template pTemplate="indicator">
+              <i class="pi pi-eye"></i>
+          </ng-template>
+          </p-image>
+          
+
+          
+          <!-- <img [src]="x.image" class="" width="120px" height="120px" alt="...">
+        </div> -->
+
+      </div>
+      
+      <button class="wishicon d-flex colormanage" (click)="addwish(x)" appHoststyle >
+       <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
+          </svg>
+      </button>
+
+
+      <div class="card-body">
+        <div style="height:40px">
+          <h6 class="card-title"><b>{{x.Product_Name}}</b></h6>
+        </div>
+        
+        <div class="badge2 d-flex">
+          <p-chip class="chip" label={{x.Category.c1}}></p-chip>
+          <p-chip class="chip" label={{x.Category.c2}}></p-chip>
+        </div>
+        <div>
+
+          <span style="color:rgb(134, 134, 134); font-size: 10.7px">{{x.Manufacturer}}</span>
+        </div>
+        <div>
+          <span><b>{{x.Price | currency: 'INR' }}</b></span>
+        </div>
+        <div style="color:grey">
+          <span>MRP <del>Rs{{x.MRP | currency: 'INR' }}</del></span>
+        </div>
+     
+        
+        <a role= "button" appTheme *ngIf="true else else2" class="btn col-12 mt-4" style="height:40px; padding:0px" pRipple (click)="addProduct(x)">
+          Add to Cart</a>
+      
+        
+        <ng-template #else2><div class="btns">
+          <div class="d-flex"><button class="btn btn-outline-danger circlebtn text-bold mt-0 me-2"
+            (click)="decreseCount(x)"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-dash"
+                viewBox="0 0 16 16">
+                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
+            </svg></button>
+        <h5>{{x.quantity}}</h5>
+        <button class="btn btn-outline-success circlebtn text-bold mt-0 ms-2"
+            (click)="IncreseCount(x)"><svg xmlns="http://www.w3.org/2000/svg"
+                width="16" height="16" fill="currentColor" class="bi bi-plus-lg"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+            </svg></button>
+    </div>
+          
+        </div>
+       
+      </ng-template>
+  
+      </div>
+    </div>
+ 
+
+
+</div>
+</div>
+
+
+
+
+
+<div class="temp2 col-12 card flex justify-content-center">
+
+  <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="20" [rowsPerPageOptions]="[8, 16, 24]"></p-paginator>
+</div>
+
+
+
+<app-confirmbox (flagsender2)="onFlag2($event)"> </app-confirmbox>
+

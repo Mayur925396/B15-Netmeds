@@ -1,0 +1,39 @@
+.child1{
+    
+    background: #24aeb1;
+    font-family: LatoBold;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 4px;
+    width:290px;
+    height: 41px;
+    border:none;
+    margin:20px;
+}
+.wishBanner{
+    padding:10px;
+    border-bottom:2px solid #151B390A;
+    font-family: Lato;
+    font-size: 14px;
+    background-color: white;
+}
+.wishB2{
+    width:100%;
+    padding:16px;
+}
+.catel{
+    background-color: #151B391A;
+    height:14px;
+    line-height: 14px;
+
+}
+.catel2 >span{
+    height:24px;
+    line-height: 24px;
+    margin-top:10px;
+}
+.removeitems{
+    border:none;
+    background-color: white;
+    scale:1.3;
+}

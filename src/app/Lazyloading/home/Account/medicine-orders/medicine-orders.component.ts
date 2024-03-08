@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./medicine-orders.component.css']
 })
 export class MedicineOrdersComponent {
-
+public ordermedicine:any=["Recent","Processing","In Transit","Delivered","Cancelled","Subscription Delivery Pending", "All"]
 }
