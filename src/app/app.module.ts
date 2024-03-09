@@ -9,6 +9,7 @@ import { Custom1Pipe } from './Common/custom1.pipe';
 import { Custom2Pipe } from './Common/custom2.pipe';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MessageService } from 'primeng/api';
@@ -23,6 +24,11 @@ import { OverlaypanelComponent } from './Common/Model/overlaypanel/overlaypanel.
 
 
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveformComponent } from './PushApiData/reactiveform/reactiveform.component';
+import { HttpClientModule } from '@angular/common/http'
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,24 +36,35 @@ import { OverlaypanelComponent } from './Common/Model/overlaypanel/overlaypanel.
     BeautyComponent,
     Custom1Pipe,
     Custom2Pipe,
+
     NavbarComponent,
     OverlaypanelComponent,
 
 
 
    
+
+    CustDirective,
+    ReactiveformComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgbModule,
+
     BrowserAnimationsModule,
     HttpClientModule,
     ToastModule,
     ConfirmDialogModule,
     ButtonModule,
     RippleModule,
+
+  
+    ReactiveFormsModule,
+ 
+
   ],
 
   providers: [MessageService],
