@@ -1,0 +1,79 @@
+.mob{
+    border-bottom:1px solid rgb(203, 203, 203);
+    display:flex;
+}
+
+.mob >input{
+    border:none;
+}
+.row{
+    background-color: #f6f6f7;
+    height:100vh;
+}
+.loginform{
+
+    border-radius:20px;
+    background-color:white;
+    height:528px;
+    width:auto;
+    margin-left:200px;
+    margin-top:60px
+}
+
+.mob input:focus{
+    outline:none;
+}
+.body{
+    height:584px;
+}
+.buttonotp{
+    color:white;
+    background-color: #24aeb1;
+    height:40px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top:30px;
+    line-height:40px;
+    width:392px;
+    border:none
+}
+input::placeholder{
+    color:rgb(170,170,170);
+    
+}
+.buttonsocial1, .buttonsocial2{
+     border-radius:5px;
+     border:1px solid rgb(202, 201, 201);
+     width:150px;
+     height:43px;
+     text-align: center;
+     line-height: 43px;
+     color: rgb(170, 170, 170);
+
+}
+.form{
+    width:515px;
+    height:528px;
+}
+.form{
+    width: 488px;;
+    height:528px;
+}
+.otpverify{
+    width:392px;
+    height:40px;
+    border-radius: 5px;
+}
+.otpverify:focus{
+    border-color:green
+}
+.sociallinks{
+    color: rgb(170, 170, 170);
+    text-decoration: none;
+}
+:host::ng-deep{
+    .p-toast-top-right {
+        top: 180px !important;
+        width:450px;
+    }
+}

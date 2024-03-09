@@ -1,1 +1,190 @@
-<p>cart works!</p>
+<div style="background-color: #f6f6f7;" *ngIf="!CartItemes else elseBlock">
+    <div class="mainhead">
+        <h4>My Cart</h4>
+    </div>
+    <div class="mainhead2">
+        <div class="text-center " style="line-height: 16px;">
+            <div>
+                <img [src]="EmptyCart" width="225px" height="165px">
+            </div>
+            <h6 class="mt-3">
+                Your Cart is empty!
+            </h6>
+            <p>
+                You have no items added in the cart.</p>
+            <p> Explore and add products you like!
+            </p>
+            <button appCust class="btn" (click)="addProduct()">ADD PRODUCTS</button>
+        </div>
+    </div>
+</div>
+
+<ng-template #elseBlock>
+    <div class="main">
+        <div class="col-12">
+            <h3>Order Summary</h3>
+        </div>
+        <div class="col-12" treat>
+            <div class="mainbanner">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../../../assets/Navbar/Cart/1707138542_569x90.jpg" class="d-block w-100"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../../../assets/Navbar/Cart/1707138517_Cart_Banner.jpg" class="d-block w-100"
+                                alt="...">
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <div class="bordercart">
+                    <h6 style="color:grey"></h6>
+                </div>
+                <p-table [value]="CartItemes" [tableStyle]="{'min-width': '60rem'}">
+                    <ng-template pTemplate="caption">
+                        <div class="d-flex align-items-center justify-content-between">
+                            Total Product Price:<span style="color:#24AEb1;font-weight:600">
+                                <h4>{{CartPrice | currency:'INR'}}</h4>
+                            </span>
+
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="header">
+                        <tr class="text-center">
+                            <th>Name</th>
+                            <th>Image</th>
+                            <th>Price</th>
+                            <th>MRP</th>
+                            <th>Discount</th>
+                            <th>Category</th>
+                            <th>Reviews</th>
+                            <th>Quantity</th>
+                            <th>Remove<br> Item</th>
+                            <th>Save Later</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td><b style="color:#24AEb1">{{product.Product_Name}}</b></td>
+                            <td><img [src]="product.image" [alt]="product.Product_Name" width="100" class="shadow-4" />
+                            </td>
+                            <td><b>{{product.Price*product.quantity | currency:'INR'}}</b></td>
+                            <td><del>{{product.MRP*product.quantity | currency:'INR'}}</del></td>
+                            <td><span class="ms-2"
+                                    style="color:green">Save</span><br><b>{{(product.MRP-product.Price)*product.quantity
+                                    | currency:'INR'}}</b></td>
+                            <td class="chips"><p-chip label={{product.Category.c1}}></p-chip> <br><br> <p-chip
+                                    class="mt-1" label={{product.Category.c2}}></p-chip></td>
+                            <td><p-rating [ngModel]="product.Rating" [readonly]="true" [cancel]="false"></p-rating></td>
+                            <td>
+                                <div class="d-flex"><button class="btn btn-outline-danger circlebtn text-bold mt-0 me-2"
+                                        (click)="decreseCount(product)"><svg xmlns="http://www.w3.org/2000/svg"
+                                            width="16" height="16" fill="currentColor" class="bi bi-dash"
+                                            viewBox="0 0 16 16">
+                                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
+                                        </svg></button>
+                                    <h5>{{product.quantity}}</h5>
+                                    <button class="btn btn-outline-success circlebtn text-bold mt-0 ms-2"
+                                        (click)="IncreseCount(product)"><svg xmlns="http://www.w3.org/2000/svg"
+                                            width="16" height="16" fill="currentColor" class="bi bi-plus-lg"
+                                            viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                                        </svg></button>
+                                </div>
+                            </td>
+
+                            <td><button class="closebtn" (click)="removeProduct(product)"><i
+                                        class="bi bi-trash3"></i></button></td>
+                            <td><button class="closebtn" style="color:#24AEb1" (click)="SaveLater(product)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1z"/>
+                                <path fill-rule="evenodd" d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708z"/>
+                              </svg></button></td>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="summary">
+                        <div class="flex align-items-center justify-content-between">
+                            In total there are {{CartItemes ? CartItemes.length : 0 }} products in your Cart.
+                        </div>
+                        <a style="text-decoration: none;" routerLink="/home">
+                            <div class="d-flex justify-content-between addMore" style="color:#24AEb1">
+                                <h5 class="mt-2">Add More Items</h5>
+                                <div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                        class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                                    </svg></div>
+                            </div>
+                        </a>
+                    </ng-template>
+                </p-table>
+                <div class="mt-5">
+                  
+                    <app-savelater (send)="fire($event)"></app-savelater>
+                </div>
+                
+            </div>
+           
+        </div>
+    </div>
+    
+</ng-template>
+
+
+
+<!-- Pick List -->
+
+<!-- <p-pickList [source]="CartItemes" [target]="targetProducts" sourceHeader="Available" targetHeader="Selected" [dragdrop]="true" [responsive]="true" [sourceStyle]="{ height: '30rem' }"
+    [targetStyle]="{ height: '30rem' }" filterBy="Product_Name" sourceFilterPlaceholder="Search by name" targetFilterPlaceholder="Search by name" breakpoint="1400px">
+    <ng-template let-product pTemplate="item">
+        <div class="flex flex-wrap p-2 align-items-center gap-3">
+            <img class="w-4rem shadow-2 flex-shrink-0 border-round" [src]="product.image" width="150px" height="150px" alt="{item.name}" />
+            <div class="flex-1 flex flex-column gap-2">
+                <span class="font-bold">{{ product.Product_Name }}</span>
+                <div class="flex align-products-center gap-2">
+                    <i class="pi pi-tag text-sm"></i>
+                    <span>{{ product.Category.c1 }}</span>
+                </div>
+            </div>
+            <span class="font-bold text-900">{{product.Price | currency:"INR" }}</span>
+        </div>
+    </ng-template>
+</p-pickList> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Confirmation Box -->
+<app-confirmbox (flagsender)="onFlag($event)">
+    <p-toast></p-toast>
+    <p-confirmDialog [style]="{width: '35vw'}"></p-confirmDialog>
+
+</app-confirmbox>

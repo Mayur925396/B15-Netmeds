@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-rewards.component.css']
 })
 export class MyRewardsComponent {
+  public rewardimg:any="../../../../assets/Navbar/empty-rewards (1).svg"
 
 }

@@ -1,0 +1,116 @@
+.maincont{
+    background-color: #f6f6f7; 
+   
+ }
+.pcontainer{
+   margin-left:200px;
+ 
+  
+}
+.item1{
+    width:350px;
+    height:168px;
+    border-radius:10px;
+    background-color: white;
+}
+.accountsec{
+    color: #24AEB1;
+    background-color: #f6f6f7;
+    border-radius: 50%;
+   
+}
+.progressmain{
+width:220px;
+background-color: #f6f6f7;
+}
+.aac2{
+    height: 122px;
+}
+
+.item2{
+    width:663px;
+    height:168px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left:30px;
+
+}
+.item3{
+    background-color:white;
+    width:350px;
+}
+
+.ClassA{
+    background-color: red;
+    width:20%;
+    color:white;
+}
+.ClassB{
+    background-color: red;
+    width:40%;
+    color:white;
+}
+.ClassC{
+    background-color: #ffcb1f;
+    width:60%;
+    color:white;
+}
+.ClassD{
+    background-color: #ffcb1f;
+    width:80%;
+    color:white;
+}
+.ClassE{
+    background-color:#24AEB1;
+    width:100%;
+    color:white;
+}
+
+
+.item3{
+    width:350px;
+    height:auto;
+    border-radius:10px;
+
+}
+.innerchild{
+    width:284px;
+    height:56px
+}
+.a1{
+   width:32px;
+   height:32px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: #f6f6f7;
+  
+   
+    
+    
+}
+
+
+
+.item4{
+    width:661px;
+    border-radius:10px;
+    margin-left: 30px;
+    margin-top:15px;
+
+}
+.anchor{
+    text-decoration: none;
+    color:black;
+    font-size: 14px;
+}
+.anchor:focus{
+    font-size: 14px;
+    font-weight:bold;
+}
+.click{
+color:#24AEB1;
+font-size: 16px;
+font-weight:bold;
+}

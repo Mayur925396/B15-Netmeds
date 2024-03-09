@@ -1,1 +1,17 @@
-<p>myprisciption works!</p>
+<div *ngIf="!imgSrc2 else elseBlock" class="noPrescription">
+<p>No Prescription Image Uploaded Or Order Details Available.</p>
+</div>
+<ng-template #elseBlock>
+<div class="bannerpresc col-12" *ngFor="let x of imgSrc2">
+    <h5>Order ID:{{""}}</h5>
+<div class="d-flex">
+    <div class="prescimg"><img class="imgdet" [src]="x"></div>
+    
+    <div class="prescdetail">
+        <div class="col-12">Date:{{""}}</div>
+        <div class="col-12">Prescription Status:{{""}}</div>
+        <div class="col-12">Order Status:{{""}}</div>
+    </div>
+</div>
+</div>
+</ng-template>

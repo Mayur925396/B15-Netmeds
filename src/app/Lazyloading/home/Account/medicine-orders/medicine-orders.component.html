@@ -1,1 +1,11 @@
-<p>medicine-orders works!</p>
+<div class="medicine Orders">
+<div class="d-flex dropdowns my-3">
+    <select class="drops">
+        <option *ngFor="let drops of ordermedicine">{{drops}}</option>
+    </select>
+</div>
+
+  <div class="ordersShow col-12">
+    No Orders available to view.
+  </div>
+</div>

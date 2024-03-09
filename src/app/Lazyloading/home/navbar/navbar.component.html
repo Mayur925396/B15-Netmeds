@@ -1,1 +1,354 @@
-<p>navbar works!</p>
+<div class="nav col-12 d-flex justify-content-center mt-2 stcikednav">
+    <a class="navbar-brand" routerLink="#">
+        <img [src]="brandlogo" width="168px" height="60px"></a>
+    <div class="searchbar d-flex ms-4">
+
+        <div class="dropdown-center">
+
+            <a class="nav-link active 2 dropdown toggle treat" data-bs-toggle="dropdown" data-bs-target="#navdrop5">
+                <p style="color:black">Deliver to <span style="color:rgb(83, 157, 133)"><b>{{pincode}}</b></span><i
+                        class="bi bi-caret-down-fill"></i></p>
+            </a>
+            <div class="dropdown-menu" id="n">
+                <div class="foots p-3">
+                    <h6>Where do you want the delivery?</h6>
+                    <span>Get access to your Addresses, Orders, and Wishlist</span>
+                    <div>
+
+                    </div>
+                </div>
+                <div class="p-3">
+                    <hr>
+                    <h6>Or Enter Pincode</h6>
+                    <span>Select pincode to see product availability.</span>
+                    <div class="pinlocate d-flex"><i class="bi bi-geo-alt-fill p-2"></i><input class="pin" type="text"
+                            placeholder="Enter Pincode" maxlength="6" [(ngModel)]="pincode"></div>
+                    <div class="my-2" style="color:red; opacity: 0.4"> <i class="bi bi-crosshair2"></i> Detect my
+                        location</div>
+                    <i>Allow to access your location.</i>
+                </div>
+            </div>
+        </div>
+        <input type="text" placeholder="Search Medicine and Wellness Product...">
+    </div>
+
+
+    <a class="nav-link active treat ms-3" routerLink="/home/prescription"><b><i
+                class="bi bi-file-earmark-arrow-up-fill me-2 navicon"></i>Upload</b></a>
+    <a class="nav-link active treat ms-3" routerLink="home/offer"><b><i
+                class="bi bi-tag me-2 navicon"></i>Offers</b></a>
+    <a class="nav-link active treat ms-3" routerLink="home/cart"><b><i
+                class="bi bi-cart3 me-2 navicon position-relative"><span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {{MathCounter}} </span></i>Cart </b></a>
+    <a role="button" class="nav-link active treat ms-3" (click)="Auth()"><b><i
+                class="bi bi-person-circle me-2 navicon"></i>{{Account}}</b></a>
+
+</div>
+
+<div class="col-12 justify-content-center">
+    <ul class="navbar nav d-flex justify-content-center col-12">
+
+        <li class="nav-item fluid ms-2">
+            <div class="dropdown dropdown2 dropdownposition">
+                <a class="nav-link active treat dropdown-toggle" routerLink="medicine" data-bs-toggle="dropdown"
+                    data-bs-target="#navdrop1"><img class="me-2" [src]="medicine" width="40px"
+                        height="40px">Medicine</a>
+                <ul class="dropdown-menu " id="drop1">
+                    <div class="column1">
+                        <li><a class="dropdown-item" routerLink="medicines">All Medicine</a></li>
+                        <li> <a class="dropdown-item" routerLink="medicine/buyagain">Buy Again</a></li>
+                        <li><a class="dropdown-item" routerLink="medicine/orderonline">Order Online</a></li>
+                    </div>
+                </ul>
+            </div>
+        </li>
+
+        <li class="nav-item fluid2 ms-2">
+            <div class="dropdown dropdown2 dropdown-center front">
+
+                <a class="nav-link active dropdown-toggle treat" routerLink="wellness" data-bs-toggle="dropdown"
+                    data-bs-target="#navdrop2"><img class="me-2" [src]="wellness" width="40px"
+                        height="40px">Wellness</a>
+                <div class="dropdown-menu" id="drop2">
+                    <div class="column">
+                        <a class="dropdown-item" routerLink="ayush"><b>Ayush</b></a>
+                        <a class="dropdown-item" routerLink="ayush">Ayurvedic</a>
+                        <a class="dropdown-item" routerLink="ayush/unani">Unani</a>
+                        <a class="dropdown-item" routerLink="ayush/homeopathy">Homeopathic</a>
+                        <a class="dropdown-item" routerLink="ayush/siddha">Siddha</a>
+                          
+                        <hr class="ms-3 me-3 mt-1 mb-2" style="color:rgb(211, 211, 211)">
+                        <a class="dropdown-item" routerLink="covid"><b>Covid Essentials</b></a>
+                        <a class="dropdown-item" routerLink="covid">Oxygen Can</a>
+                        <a class="dropdown-item" routerLink="covid/personalhome">Personal and Home<br>
+                            Essentials</a>
+                            
+                        <a class="dropdown-item" routerLink="covid/business">Buisness Essential</a>
+                        <a class="dropdown-item" routerLink="covid/mask">Mask, Gloves & <br> Protective Elements</a>
+                        <a class="dropdown-item" routerLink="covid/travel">Travel Essentials</a>
+                      
+                        <hr class="ms-3 me-3 mt-1 mb-2" style="color:rgb(211, 211, 211)">
+                        <a class="dropdown-item" routerLink="devices"><b>Devices</b></a>
+                        <a class="dropdown-item" routerLink="devices">Breath Easy</a>
+                        <a class="dropdown-item" routerLink="devices/surgical">Surgical Accessories</a>
+                        <a class="dropdown-item" routerLink="devices/measurement">Measurements</a>
+                        <a class="dropdown-item" routerLink="devices/ortho">Orthopeadics</a>
+
+                    </div>
+                    <div class="column2">
+
+                        <a class="dropdown-item" routerLink="diabetes"><b>Diabeties Support</b></a>
+                        <a class="dropdown-item" routerLink="diabetes">Glucometers</a>
+                        <a class="dropdown-item" routerLink="diabetes/sugarsub">Sugar Substitutes</a>
+                        <a class="dropdown-item" routerLink="diabetes/diabeticsmgmt">Diabeties Management
+                            <br>Suppliments</a>
+                        <a class="dropdown-item" routerLink="diabetes/diabetiescare">Diabeties Care Ayurveda</a>
+                        <a class="dropdown-item" routerLink="diabetes/lancets">Lancets and Strips</a>
+                       
+                        <hr class="ms-3 me-3 mt-1 mb-2" style="color:rgb(211, 211, 211)">
+                        <a class="dropdown-item" routerLink="eyewear"><b>Eye wear</b></a>
+                        <a class="dropdown-item" routerLink="eyewear">Eye Glasses</a>
+                        <a class="dropdown-item" routerLink="eyewear/reading">Reading Glasses</a>
+                        <a class="dropdown-item" routerLink="eyewear/contactlense">Contact Glasses</a>
+                        
+                        <hr class="ms-3 me-3 mt-1 mb-2" style="color:rgb(211, 211, 211)">
+                        <a class="dropdown-item" routerLink="fitness"><b>Fitness</b></a>
+                        <a class="dropdown-item" routerLink="fitness">Weight Management</a>
+                        <a class="dropdown-item" routerLink="fitness/suppliments">Sports Suppliments</a>
+                        <a class="dropdown-item" routerLink="fitness/smoking">Smoking Cessation<br> Support</a>
+                        <a class="dropdown-item" routerLink="fitness/vitamins">Vitamins and <br>Suppliments</a>
+                        <a class="dropdown-item" routerLink="fitness/family">Family Neutritients</a>
+                        <a class="dropdown-item" routerLink="fitness/healthfood">Health, Food and Drinks</a>
+                        <a class="dropdown-item" routerLink="fitness/ayurvedicsuppl">Ayurvedic Suppliments</a>
+                    </div>
+
+                    <div class="column3">
+
+                        <a class="dropdown-item" routerLink="healthconditions"><b>Health Conditions</b></a>
+                        <a class="dropdown-item" routerLink="healthconditions">Womens Care</a>
+                        <a class="dropdown-item" routerLink="healthconditions/bonejoint">Bone and Joint Pain</a>
+                        <a class="dropdown-item" routerLink="healthconditions/liver">Liver Care</a>
+                        <a class="dropdown-item" routerLink="healthconditions/piles">Piles Care</a>
+                        <a class="dropdown-item" routerLink="healthconditions/weightcare">Weight Care(EW)</a>
+                        <a class="dropdown-item" routerLink="healthconditions/stomach">Stomach Care</a>
+                        <a class="dropdown-item" routerLink="healthconditions/mental">Mental Care</a>
+                        <a class="dropdown-item" routerLink="healthconditions/daddiction">De-Addiction</a>
+                        <a class="dropdown-item" routerLink="healthconditions/diabeticcare">Diabetic Care</a>
+                        <a class="dropdown-item" routerLink="healthconditions/cardiaccare">Cardiac Care</a>
+                        <a class="dropdown-item" routerLink="healthconditions/coldfever">Cold and Fever</a>
+                        <a class="dropdown-item" routerLink="healthconditions/immunity">Immunity Care</a>
+                        <a class="dropdown-item" routerLink="healthconditions/lounge">Lung Care</a>
+                        <hr class="ms-3 me-3 mt-1 mb-2" style="color:rgb(211, 211, 211)">
+
+                        <a class="dropdown-item" routerLink="mombaby"><b>Mom and Baby</b></a>
+                        <a class="dropdown-item" routerLink="mombaby">Baby Care</a>
+                        <a class="dropdown-item" routerLink="mombaby/feminine">Feminine Hygiene</a>
+                        <a class="dropdown-item" routerLink="mombaby/maternitycare">Maternity Care</a>
+                        <a class="dropdown-item" routerLink="mombaby/babybath">Baby Bath Time</a>
+                        <a class="dropdown-item" routerLink="mombaby/materinityaccessories">Maternity Accessories
+                            Hygiene</a>
+                        <!-- <a class="dropdown-item" routerLink="mombaby/toysandgames">Toys and Games</a> -->
+                    </div>
+
+                    <div class="column4">
+
+                        <a class="dropdown-item" routerLink="personalcare"><b>Personal Care</b></a>
+                        <a class="dropdown-item" routerLink="personalcare">Home and Health</a>
+                        <a class="dropdown-item" routerLink="personalcare/seniorcare">Senior Care</a>
+                        <a class="dropdown-item" routerLink="personalcare/facepersonal">Face Personal Care</a>
+                        <a class="dropdown-item" routerLink="personalcare/handsandfeet">Hands and Feet Care</a>
+                        <a class="dropdown-item" routerLink="personalcare/oralcare">Oral Care</a>
+                        <a class="dropdown-item" routerLink="personalcare/bathshower">Bath and Shower</a>
+                        <a class="dropdown-item" routerLink="personalcare/bodycare">Body Care</a>
+                        <a class="dropdown-item" routerLink="personalcare/toolsandacc">Personal Care Tools and<br>
+                            Accessories</a>
+                        <a class="dropdown-item" routerLink="personalcare/lipcare">Lip Care</a>
+                        <a class="dropdown-item" routerLink="personalcare/bathingacc">Bathing Accessories</a>
+
+                        <hr class="ms-3 me-3 mt-1 mb-2" style="color:rgb(211, 211, 211)">
+                        <a class="dropdown-item" routerLink="sexsualwellness"><b>Sexsual Wellness</b></a>
+                        <a class="dropdown-item" routerLink="sexsualwellness">Condoms</a>
+                        <a class="dropdown-item" routerLink="sexsualwellness/massagervib">Massage/ Vibrators</a>
+                        <a class="dropdown-item" routerLink="sexsualwellness/sexualhealth">Sexsual Health and
+                            <br>Suppliments </a>
+                        <a class="dropdown-item" routerLink="sexsualwellness/lubricants">Lubricants</a>
+                        <a class="dropdown-item" routerLink="sexsualwellness/sprayngel">Spray and Gels</a>
+                    </div>
+
+                    <div class="column5">
+
+                        <a class="dropdown-item" routerLink="surgical"><b>Surgical</b></a>
+                        <a class="dropdown-item" routerLink="surgical">Respiratory Supplies</a>
+                        <a class="dropdown-item" routerLink="surgical/ivinfusion">Iv Infusion</a>
+                        <a class="dropdown-item" routerLink="surgical/surgicalinstrument">Surgical Instrument</a>
+                        <a class="dropdown-item" routerLink="surgical/dressing">Dressing</a>
+                        <a class="dropdown-item" routerLink="surgical/gicare">Gi Care</a>
+                        <a class="dropdown-item" routerLink="surgical/urinary">Urinary Care</a>
+                        <a class="dropdown-item" routerLink="surgical/wound">Wound Treatment</a>
+
+                        <hr class="ms-3 me-3 mt-1 mb-2" style="color:rgb(211, 211, 211)">
+                        <a class="dropdown-item" routerLink="veterinary"><b>Veterinary</b></a>
+                        <a class="dropdown-item" routerLink="veterinary">Petcare</a>
+                        <a class="dropdown-item" routerLink="veterinary/farmanimal">Farm Animals</a>
+                       
+                        <hr class="ms-3 me-3 mt-1 mb-2" style="color:rgb(211, 211, 211)">
+                        <a class="dropdown-item" routerLink="store"><b>Store</b></a>
+                        <a class="dropdown-item" routerLink="store">Vitamins Store</a>
+                        <a class="dropdown-item" routerLink="store/drema">Derma Cosmetics</a>
+                        <a class="dropdown-item" routerLink="store/diabetiescenter">Diabties Center</a>
+
+                        <hr class="ms-3 me-3 mt-1 mb-2" style="color:rgb(211, 211, 211)">
+                        <a class="dropdown-item" routerLink="trending"><b>Trending</b></a>
+                        <a class="dropdown-item" routerLink="trending">CeraVe</a>
+                        <a class="dropdown-item" routerLink="trending/cetaphill">Cetaphill</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </li>
+
+
+        <li class="nav-item fluid ms-2">
+
+            <a class="nav-link active 2 treat dropdown2 " routerLink="labtest"><img class="me-2" [src]="labtest"
+                    width="40px" height="40px">Lab
+                Test</a>
+        </li>
+
+        <li class="nav-item ms-2 fluid">
+            <div class="dropdown dropdown2 show front">
+
+                <a class="nav-link active 2 dropdown-toggle treat" routerLink="beauty" data-bs-toggle="dropdown"
+                    data-bs-target="#navdrop3"><img class="me-2" [src]="wellness" width="40px" height="40px">Beauty</a>
+                <div class="dropdown-menu" id="drop3">
+                    <div class="column">
+                        <a class="dropdown-item" routerLink="fragrences"><b>Fragrences</b></a>
+                        <a class="dropdown-item" routerLink="fragrences">Men</a>
+                        <a class="dropdown-item" routerLink="fragrences/unisex">Unisex</a>
+                        <a class="dropdown-item" routerLink="fragrences/female">Women</a>
+
+                        <hr class="ms-3 me-3 mt-1 mb-2" style="color:rgb(211, 211, 211)">
+                        <a class="dropdown-item" routerLink="hair"><b>Hair</b></a>
+                        <a class="dropdown-item" routerLink="hair">Hair Care</a>
+                        <a class="dropdown-item" routerLink="hair/haircolour">Hair Colour</a>
+                        <a class="dropdown-item" routerLink="hair/hairstyle">Hair Styling</a>
+                        <a class="dropdown-item" routerLink="hair/hairtool">Hair Tools and <br>Accessories</a>
+                        <a class="dropdown-item" routerLink="hair/scalp">Scalp Treatments</a>
+                        <a class="dropdown-item" routerLink="hair/shopbyhair">Shop by Hair Type</a>
+
+                        <hr class="ms-3 me-3 mt-1 mb-2" style="color:rgb(211, 211, 211)">
+                        <a class="dropdown-item" routerLink="mensgrooming"><b>Mens Grooming</b></a>
+                        <a class="dropdown-item" routerLink="mensgrooming">Beard Care</a>
+                        <a class="dropdown-item" routerLink="mensgrooming/shaving">Shaving</a>
+
+                    </div>
+                    <div class="column2">
+
+                        <a class="dropdown-item" routerLink="makeup"><b>Make-up</b></a>
+                        <a class="dropdown-item" routerLink="makeup">Eyes</a>
+                        <a class="dropdown-item" routerLink="makeup/facemakeup">Face Makeup</a>
+                        <a class="dropdown-item" routerLink="makeup/lips">Lips</a>
+                        <a class="dropdown-item" routerLink="makeup/makeuptools">Makeup tools and <br> Brushesh</a>
+                        <a class="dropdown-item" routerLink="makeup/nails">Nails</a>
+
+                        <hr class="ms-3 me-3 mt-1 mb-2" style="color:rgb(211, 211, 211)">
+                        <a class="dropdown-item" routerLink="mombaby"><b>Mom and Baby</b></a>
+                        <a class="dropdown-item" routerLink="mombaby">Baby Care</a>
+                        <a class="dropdown-item" routerLink="mombaby/feminine">Feminine Hygiene</a>
+                        <a class="dropdown-item" routerLink="mombaby/maternitycare">Maternity Care</a>
+                        <a class="dropdown-item" routerLink="mombaby/babybath">Baby Bath Time</a>
+                        <a class="dropdown-item" routerLink="mombaby/materinityaccessories">Maternity
+                            Accessories</a>
+                        <a class="dropdown-item" routerLink="mombaby/toysandgames">Toys and Games</a>
+                    </div>
+
+                    <div class="column3">
+
+                        <a class="dropdown-item" routerLink="personalcare"><b>Personal Care</b></a>
+                        <a class="dropdown-item" routerLink="personalcare">Home and Health</a>
+                        <a class="dropdown-item" routerLink="personalcare/seniorcare">Senior Care</a>
+                        <a class="dropdown-item" routerLink="personalcare/facepersonal">Face Personal Care</a>
+                        <a class="dropdown-item" routerLink="personalcare/handsandfeet">Hands and Feet Care</a>
+                        <a class="dropdown-item" routerLink="personalcare/oralcare">Oral Care</a>
+                        <a class="dropdown-item" routerLink="personalcare/bathshower">Bath and Shower</a>
+                        <a class="dropdown-item" routerLink="personalcare/bodycare">Body Care</a>
+                        <a class="dropdown-item" routerLink="personalcare/toolsandacc">Personal Care Tools and<br>
+                            Accessories</a>
+                        <a class="dropdown-item" routerLink="personalcare/lipcare">Lip Care</a>
+                        <a class="dropdown-item" routerLink="personalcare/bathingacc">Bathing Accessories</a>
+
+                    </div>
+
+                    <div class="column4">
+
+                        <a class="dropdown-item" routerLink="skincare"><b>Skin Care</b></a>
+                        <a class="dropdown-item" routerLink="skincare">Aromatherpy</a>
+                        <a class="dropdown-item" routerLink="skincare/cleansers">Cleansers</a>
+                        <a class="dropdown-item" routerLink="skincare/eyecare">Eye Care</a>
+                        <a class="dropdown-item" routerLink="skincare/faceskincare">Face Skincare</a>
+                        <a class="dropdown-item" routerLink="skincare/mask">Mask</a>
+                        <a class="dropdown-item" routerLink="skincare/moisturiser">Moisturiser</a>
+                        <a class="dropdown-item" routerLink="skincare/sunscreen">Sunscreen</a>
+                        <a class="dropdown-item" routerLink="skincare/tonner">Tonner and Serums</a>
+
+                        <hr class="ms-3 me-3 mt-1 mb-2" style="color:rgb(211, 211, 211)">
+                        <a class="dropdown-item" routerLink="toolsapp"><b>Tools and Appliences</b></a>
+                        <a class="dropdown-item" routerLink="toolsapp">Face/ Skin Care</a>
+                        <a class="dropdown-item" routerLink="toolsapp/hairstying">Hair Styling Tools</a>
+                        <a class="dropdown-item" routerLink="toolsapp/massage">Massage Tool</a>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </li>
+
+
+
+
+        <li class="nav-item ms-2">
+            <div class="dropdown dropdown2 dropdownposition">
+
+                <a class="nav-link active 2 dropdown-toggle treat" routerLink="healthcorner" data-bs-toggle="dropdown"
+                    data-bs-target="#navdrop5"><img class="me-2" [src]="healthlibrary" width="40px" height="40px">Health
+                    Corner</a>
+                <div class="dropdown-menu" id="drop4">
+                    <div class="column6">
+                        <a class="dropdown-item" routerLink="healthcorner">Health Library</a>
+                        <a class="dropdown-item" routerLink="healthcorner/petientsalike">PetientsAlike</a>
+                        <a class="dropdown-item" routerLink="healthcorner/allaboutcancer">All about Cancers</a>
+                        <a class="dropdown-item" routerLink="healthcorner/coronaaware">Corona Awareness</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+
+
+
+
+
+
+    </ul>
+
+</div>
+<div class="nav3 col-12 d-flex justify-content-center">
+    <a class="nav-link ms-3" routerLink="healthcorner">Covid Essentials</a>
+    <a class="nav-link ms-3" routerLink="healthcorner/petientsalike">Diabetes</a>
+    <a class="nav-link ms-3" routerLink="healthcorner/allaboutcancer">Cardiac Care</a>
+    <a class="nav-link ms-3" routerLink="healthcorner/coronaaware">Stomach Care</a>
+    <a class="nav-link ms-3" routerLink="healthcorner">Ayurvedic</a>
+    <a class="nav-link ms-3" routerLink="healthcorner/petientsalike">Homeopathy</a>
+    <a class="nav-link ms-3" routerLink="healthcorner/allaboutcancer">Fitness</a>
+    <a class="nav-link ms-3" routerLink="healthcorner/coronaaware">Mom & Baby</a>
+    <a class="nav-link ms-3" routerLink="healthcorner/allaboutcancer">Devices</a>
+    <a class="nav-link ms-3" routerLink="healthcorner/coronaaware">Surgical</a>
+    <a class="nav-link ms-3" routerLink="healthcorner">Sexsual Wellness</a>
+    <a class="nav-link ms-3" routerLink="healthcorner/petientsalike">Treatments</a>
+    <a class="nav-link ms-3" routerLink="healthcorner/allaboutcancer">Skin Care</a>
+    <a class="nav-link ms-3" routerLink="healthcorner/coronaaware">Personal Care</a>
+</div>
+

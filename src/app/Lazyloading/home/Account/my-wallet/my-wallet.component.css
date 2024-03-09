@@ -1,0 +1,66 @@
+.showbalance{
+    font-family: Lato;
+}
+
+.balance1{
+    font-size: 12px;
+    font-weight:bold;
+    letter-spacing: 1px;
+}
+.curenc{
+    width:32px;
+    height:32px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    background-color:rgba(255, 255, 255, 0.61);
+}
+.NmsCash{
+    height:72px;
+    background-color:#24AEB1;
+    border-radius:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    width:315px;
+}
+.it2{
+    width:300px;
+    line-height:16px;
+    height:16px;
+    margin-left:10px;
+    color:white
+}
+
+.closebtn{
+   background-color:rgba(221, 219, 219, 0.674);
+   border-radius: 50%;
+   border:none;
+   width:48px;
+   height:48px;
+   text-align: center;
+   
+}
+.modal-body{
+    color:rgb(136, 136, 136);
+    background-color: white;
+    font-family: Lato;
+    font-size: 12px;
+    border-radius: 5px;
+    
+    
+}
+.om1{
+    border:none;
+    background-color: transparent;
+    padding:0px;
+    margin-top:8px;
+}
+.dent1{
+    background-color: white;
+    border-radius: 5px;
+
+}

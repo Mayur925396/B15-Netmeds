@@ -1,0 +1,42 @@
+.myrewards{
+    width:706px;
+    height:auto;
+   
+
+}
+.msg{
+    font-family: Lato;
+    font-size: 16px;
+    color: #151b39;
+    line-height: 24px;
+    letter-spacing: .15px;
+    padding: 40px 0 8px;
+   
+    
+    width:290px;
+    
+
+}
+.appCust{
+    background-color: #24AEB1;
+    
+    text-align: center;
+    height:41px;
+    width:290px;
+    line-height: 41px;
+    font-weight: bold;
+    border-radius: 5px;
+    
+    border:none;
+    
+
+}
+.appCust> a{
+    text-decoration: none;
+    color:white;
+}
+.tends{
+    height:276px;
+    text-align:center;
+    margin-top:60px
+}

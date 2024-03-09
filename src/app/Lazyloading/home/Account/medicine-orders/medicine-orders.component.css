@@ -1,0 +1,20 @@
+.ordersShow{
+    background-color: white;
+    height:53px;
+    width:663px;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 53px;
+}
+.drops{
+    width:220px;
+    height:36px;
+    background-color: #151B390A;
+    border-radius:2px;
+    
+}
+.dropdowns{
+    flex-direction: row-reverse;
+
+
+}
