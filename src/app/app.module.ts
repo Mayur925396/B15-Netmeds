@@ -11,10 +11,10 @@ import { Custom2Pipe } from './Common/custom2.pipe';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 import { MessageService } from 'primeng/api';
 import { NavbarComponent } from './Lazyloading/home/navbar/navbar.component';
-import { FormsModule } from '@angular/forms';
+
 import { ToastModule } from 'primeng/toast';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ButtonModule } from 'primeng/button';
@@ -27,6 +27,7 @@ import { OverlaypanelComponent } from './Common/Model/overlaypanel/overlaypanel.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveformComponent } from './PushApiData/reactiveform/reactiveform.component';
 import { HttpClientModule } from '@angular/common/http'
+import { CustDirective } from './Common/cust.directive';
 
 
 @NgModule({
