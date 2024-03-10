@@ -27,19 +27,19 @@
                 </div>
             </div>
             <div class="item2 d-flex justify-content-around align-items-center">
-                <div class="text-center">
-                    <img [src]="ban1">
-                    <p> <a class="anchor" routerLink="/home/accountinfo" (click)="enable1()" fragment="section1">Payment
+                <div class="text-center" (click)="enable1()">
+                    <img [src]="ban1" class="anchor">
+                    <p> <a class="anchor" routerLink="/home/accountinfo"  fragment="section1">Payment
                             Methods</a></p>
                 </div>
-                <div class="text-center">
+                <div class="text-center anchor" (click)="enable2()">
                     <img [src]="ban2">
                     <p><a class="anchor" routerLink="/home/accountinfo" (click)="enable2()" fragment="section2">Medicine
                             Orders</a></p>
                 </div>
-                <div class="text-center">
+                <div class="text-center anchor" (click)="enable3()">
                     <img [src]="ban3">
-                    <p><a class="anchor" routerLink="/home/accountinfo" (click)="enable3()" fragment="section3">My
+                    <p><a class="anchor" routerLink="/home/accountinfo"  fragment="section3">My
                             Rewards</a></p>
                 </div>
             </div>
@@ -48,7 +48,7 @@
         </div>
         <div class="d-flex ">
             <div class="item3 mt-3">
-                <div class="inner3 d-flex justify-content-around align-items-center"  [class.click]="sample5==='person'" (click)="toggleIcon('person')">
+                <div class="inner3 d-flex justify-content-around align-items-center" (click)="enable4()" [class.click]="sample5==='person'" (click)="toggleIcon('person')">
                     <div class="a1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                             class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -60,7 +60,7 @@
                     <div class="d-flex ms-2 justify-content-between innerchild align-items-center"
                         style="border-bottom: 1px solid rgb(174, 173, 173);">
                         <div style="line-height: 24px">
-                            <a class="anchor" routerLink="/home/accountinfo" (click)="enable4()"
+                            <a class="anchor" routerLink="/home/accountinfo" 
                                 fragment="section4">Account Information</a>
                         </div>
                         <div><b><i class="bi bi-caret-right"></i></b></div>
@@ -68,7 +68,7 @@
 
                 </div>
 
-                <div class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='wallet'" (click)="toggleIcon('wallet')">
+                <div class="inner3 d-flex justify-content-around align-items-center" (click)="enable5()" [class.click]="sample5==='wallet'" (click)="toggleIcon('wallet')">
 
                     <div class="a1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -80,12 +80,12 @@
                     <div class="d-flex ms-2 justify-content-between innerchild align-items-center"
                         style="border-bottom: 1px solid rgb(174, 173, 173)">
                         <div style="line-height: 24px;"> <a class="anchor" routerLink="/home/accountinfo"
-                                (click)="enable5()" fragment="section5">Wallet</a></div>
+                                 fragment="section5">Wallet</a></div>
                         <div><b><i class="bi bi-caret-right"></i></b></div>
                     </div>
                 </div>
 
-                <div class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='wishlist'" (click)="toggleIcon('wishlist')">
+                <div class="inner3 d-flex justify-content-around align-items-center" (click)="enable6()" [class.click]="sample5==='wishlist'" (click)="toggleIcon('wishlist')">
 
                     <div class="a1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -97,12 +97,12 @@
                     <div class="d-flex ms-2 justify-content-between innerchild align-items-center"
                         style="border-bottom: 1px solid rgb(174, 173, 173)">
                         <div style="line-height: 24px;"><a class="anchor" routerLink="/home/accountinfo"
-                                (click)="enable6()" fragment="section6">My Wishlist</a></div>
+                                 fragment="section6">My Wishlist</a></div>
                         <div><b><i class="bi bi-caret-right"></i></b></div>
                     </div>
                 </div>
 
-                <div class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='offer'" (click)="toggleIcon('offer')">
+                <div routerLink="/home/offer" class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='offer'" (click)="toggleIcon('offer')">
 
                     <div class="a1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -122,7 +122,7 @@
                     </div>
                 </div>
 
-                <div class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='netmeds'" (click)="toggleIcon('netmeds')">
+                <div class="inner3 d-flex justify-content-around align-items-center" (click)="enable7()" [class.click]="sample5==='netmeds'" (click)="toggleIcon('netmeds')">
 
                     <div class="a1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -134,12 +134,12 @@
                     <div class="d-flex ms-2 justify-content-between innerchild align-items-center"
                         style="border-bottom: 1px solid rgb(174, 173, 173)">
                         <div style="line-height: 24px;"><a class="anchor" routerLink="/home/accountinfo"
-                            (click)="enable7()" fragment="section7">Netmed First</a></div>
+                            fragment="section7">Netmed First</a></div>
                         <div><b><i class="bi bi-caret-right"></i></b></div>
                     </div>
                 </div>
 
-                <div class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='address'" (click)="toggleIcon('address')">
+                <div class="inner3 d-flex justify-content-around align-items-center" (click)="enable8()" [class.click]="sample5==='address'" (click)="toggleIcon('address')">
 
                     <div class="a1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -151,12 +151,12 @@
                     <div class="d-flex ms-2 justify-content-between innerchild align-items-center"
                         style="border-bottom: 1px solid rgb(174, 173, 173)">
                         <div style="line-height: 24px;"><a class="anchor" routerLink="/home/accountinfo"
-                            (click)="enable8()" fragment="section8">Delivery Address</a></div>
+                             fragment="section8">Delivery Address</a></div>
                         <div><b><i class="bi bi-caret-right"></i></b></div>
                     </div>
                 </div>
 
-                <div class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='presc'" (click)="toggleIcon('presc')">
+                <div class="inner3 d-flex justify-content-around align-items-center" (click)="enable9()" [class.click]="sample5==='presc'" (click)="toggleIcon('presc')">
 
                     <div class="a1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -170,12 +170,12 @@
                     <div class="d-flex ms-2 justify-content-between innerchild align-items-center"
                         style="border-bottom: 1px solid rgb(174, 173, 173)">
                         <div style="line-height: 24px;"><a class="anchor" routerLink="/home/accountinfo"
-                            (click)="enable9()" fragment="section9">My Priscription</a></div>
+                            fragment="section9">My Priscription</a></div>
                         <div><b><i class="bi bi-caret-right"></i></b></div>
                     </div>
                 </div>
 
-                <div class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='subs'" (click)="toggleIcon('subs')">
+                <div class="inner3 d-flex justify-content-around align-items-center" (click)="enable10()" [class.click]="sample5==='subs'" (click)="toggleIcon('subs')">
 
                     <div class="a1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -187,12 +187,12 @@
                     <div class="d-flex ms-2 justify-content-between innerchild align-items-center"
                         style="border-bottom: 1px solid rgb(174, 173, 173)">
                         <div style="line-height: 24px;"><a class="anchor" routerLink="/home/accountinfo"
-                            (click)="enable10()" fragment="section10">My Subscription</a></div>
+                             fragment="section10">My Subscription</a></div>
                         <div><b><i class="bi bi-caret-right"></i></b></div>
                     </div>
                 </div>
 
-                <div class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='refer'" (click)="toggleIcon('refer')">
+                <div class="inner3 d-flex justify-content-around align-items-center" (click)="enable11()" [class.click]="sample5==='refer'" (click)="toggleIcon('refer')">
 
                     <div class="a1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -204,12 +204,12 @@
                     <div class="d-flex ms-2 justify-content-between innerchild align-items-center"
                         style="border-bottom: 1px solid rgb(174, 173, 173)">
                         <div style="line-height: 24px;"><a class="anchor" routerLink="/home/accountinfo"
-                            (click)="enable11()" fragment="section11">Refer and Earn</a></div>
+                             fragment="section11">Refer and Earn</a></div>
                         <div><b><i class="bi bi-caret-right"></i></b></div>
                     </div>
                 </div>
 
-                <div class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='help'" (click)="toggleIcon('help')">
+                <div routerLink="/home/contactus" class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='help'" (click)="toggleIcon('help')">
 
                     <div class="a1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -226,7 +226,7 @@
                 </div>
 
 
-                <div class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='contact'" (click)="toggleIcon('contact')">
+                <div routerLink="/home/contactus" class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='contact'" (click)="toggleIcon('contact')">
 
                     <div class="a1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -244,7 +244,7 @@
                     </div>
                 </div>
 
-                <div class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='tnc'" (click)="toggleIcon('tnc')">
+                <div routerLink="/home/termsandconditions" class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='tnc'" (click)="toggleIcon('tnc')">
 
                     <div class="a1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -261,7 +261,7 @@
                     </div>
                 </div>
 
-                <div class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='rate'" (click)="toggleIcon('rate')">
+                <div (click)="enable12()" class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='rate'" (click)="toggleIcon('rate')">
 
                     <div class="a1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -273,13 +273,13 @@
                     <div class="d-flex ms-2 justify-content-between innerchild align-items-center"
                         style="border-bottom: 1px solid rgb(174, 173, 173)">
                         <div style="line-height: 24px;"><a class="anchor" routerLink="/home/accountinfo"
-                            (click)="enable12()" fragment="section12">Rate Us</a></div>
+                             fragment="section12">Rate Us</a></div>
                         <div><b><i class="bi bi-caret-right"></i></b></div>
                     </div>
                 </div>
 
-                <div class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='log'" (click)="toggleIcon('log')">
-
+                <div routerLink="/home/accountForm" class="inner3 d-flex justify-content-around align-items-center" [class.click]="sample5==='log'" (click)="toggleIcon('log')" (click)="logout()">
+                 
                     <div class="a1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-box-arrow-right" viewBox="0 0 16 16">
