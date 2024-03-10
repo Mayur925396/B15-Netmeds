@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountinformationComponent } from '../accountinformation/accountinformation.component';
 import { DataTransferService } from 'src/app/Common/data-transfer.service';
+import { CommonServiceService } from 'src/app/Common/common-service.service';
 
 @Component({
   selector: 'app-account-information',
@@ -24,7 +25,7 @@ export class AccountInformationComponent {
   public ProfileEmail: string = "";
   public ProfilePhone: String = "";
   public BannerName: any = "Your Account"
-  public sample5: string = ''
+  public sample5: string = 'person'
 
   toggleIcon(icon: string) {
     this.sample5 = icon === this.sample5 ? '' : icon;
@@ -32,7 +33,7 @@ export class AccountInformationComponent {
 
 
 
-  constructor(private route: Router,private DataProfile:DataTransferService) {
+  constructor(private route: Router,private DataProfile:DataTransferService, private db:CommonServiceService) {
     if (this.sample3 == 20) {
       this.style2 = 'ClassA'
     } else if (this.sample3 == 40) {
@@ -130,5 +131,10 @@ export class AccountInformationComponent {
   enable12() {
     this.showDataFlag = "test12"
     this.BannerName = "Rate Us"
+  }
+
+  logout(){
+    this.db.authset(false);
+    this.DataProfile.profileinfo("Sign In/ Sign Up")
   }
 }

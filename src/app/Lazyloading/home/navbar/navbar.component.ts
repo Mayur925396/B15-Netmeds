@@ -17,7 +17,7 @@ export class NavbarComponent {
   public labtest:any="../../assets/Navbar/diagnostics.svg";
   public healthlibrary:any="../../assets/Navbar/health-library.svg";
   public pincode:any="411057";
-  public Account:any;
+  public Account:any="Sign In/ Sign Up";
   public sample10:any=true;
   
   public MathCounter:any=-1;

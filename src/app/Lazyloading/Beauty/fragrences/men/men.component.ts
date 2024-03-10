@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { ConfirmationService, MessageService,ConfirmEventType  } from 'primeng/api';
 import { OverlayPanel } from 'primeng/overlaypanel';
-import { Observable, merge, take } from 'rxjs';
+import { Observable, concat, merge, take } from 'rxjs';
 import { ConfirmboxComponent } from 'src/app/Common/Model/confirmbox/confirmbox.component';
 
 import { API2Service, WishlistProduct } from 'src/app/Common/common-service.service';
@@ -51,7 +51,7 @@ export class MenComponent {
   recieveData() {
     const obs1:any=this.api.getDatafromAPI();
     const obs2:any=this.api.recievedata();
- merge(obs1,obs2).subscribe({
+ concat(obs1,obs2).subscribe({
       next: (res: any) => {
         console.log(res);
         this.CardData.push(res);
