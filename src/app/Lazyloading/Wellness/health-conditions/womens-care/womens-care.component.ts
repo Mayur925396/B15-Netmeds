@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./womens-care.component.css']
 })
 export class WomensCareComponent {
-
+public data : any = "hello womens care "
 }
